@@ -15,6 +15,7 @@ public class Method {
         m.printMessage();  // Calling the method
     }
 }
+ feature202
 
 //feature202 changes added
 public class Main {
@@ -33,3 +34,26 @@ public class Main {
     }
 }
 //feature 202 ended 
+ 
+//feature 201 changes
+public class Main {
+    public static void main(String[] args) {
+        int totalUsers = 100;
+        int usersWithoutSubmission = 20;
+        int usersWithWrongSubmissions = 30;
+        
+        int[] result = calculateRatings(totalUsers, usersWithoutSubmission, usersWithWrongSubmissions);
+        
+        System.out.println("Users who will get a rating: " + result[0]);
+        System.out.println("Users who will get a rating > 1000: " + result[1]);
+    }
+
+    public static int[] calculateRatings(int total, int noSubmission, int wrongSubmission) {
+        int usersWithRating = total - noSubmission;
+        int usersAbove1000 = usersWithRating - wrongSubmission;
+        
+        return new int[]{usersWithRating, usersAbove1000};
+    }
+}
+//end feature 201 changes
+  main
